@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://formsubmit.co; form-action 'self' mailto: https://formsubmit.co; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#003366">
+
+    <title>Request a Quote | Advance Tech Solutions</title>
+    <meta name="description" content="Request a free IT service quotation from Advance Tech Solutions and get an instant price estimate for repairs, networking, CCTV and more.">
+    <meta name="keywords" content="IT quote, computer repair quote, CCTV quote, network installation price, Mbombela">
+    <meta name="author" content="Advance Vutlhari">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://YOUR-USERNAME.github.io/advance-tech-solutions/enquiry.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Request a Quote | Advance Tech Solutions">
+    <meta property="og:description" content="Request a free IT service quotation from Advance Tech Solutions and get an instant price estimate for repairs, networking, CCTV and more.">
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/advance-tech-solutions/enquiry.html">
+    <meta property="og:image" content="https://YOUR-USERNAME.github.io/advance-tech-solutions/images/hero.jpg">
+    <meta property="og:locale" content="en_ZA">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23003366'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='%23fff' font-family='Arial' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <div class="logo">
+        <a class="logo-text" href="index.html">Advance Tech Solutions</a>
+    </div>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html" class="active" aria-current="page">Request Quote</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main">
+
+<section class="page-header">
+    <h1>Request a Quote</h1>
+    <p>Tell us what technology service you need and get an instant estimate.</p>
+</section>
+
+<section class="form-section">
+    <form id="quoteForm" class="contact-form" action="https://formsubmit.co/info@advancetech.co.za" method="POST" novalidate>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" maxlength="60" required>
+        <span class="field-error" id="name-error" role="alert"></span>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+        <span class="field-error" id="email-error" role="alert"></span>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. 071 234 5678" autocomplete="tel" required>
+        <span class="field-error" id="phone-error" role="alert"></span>
+
+        <label for="service">Service Required</label>
+        <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="computer-repair">Computer Repairs</option>
+            <option value="networking">Network Installation</option>
+            <option value="cctv">CCTV Installation</option>
+            <option value="software">Software Installation</option>
+            <option value="printer">Printer Support</option>
+            <option value="security">IT Security</option>
+        </select>
+        <span class="field-error" id="service-error" role="alert"></span>
+
+        <label for="budget">Estimated Budget <span class="optional">(optional)</span></label>
+        <select id="budget" name="budget">
+            <option value="">Select budget</option>
+            <option value="under1000">Under R1,000</option>
+            <option value="1000-3000">R1,000 - R3,000</option>
+            <option value="3000-5000">R3,000 - R5,000</option>
+            <option value="5000+">Above R5,000</option>
+        </select>
+        <span class="field-error" id="budget-error" role="alert"></span>
+
+        <label for="description">Describe Your Requirements</label>
+        <textarea id="description" name="description" rows="6" maxlength="1500" placeholder="Tell us more about the service you need..." required></textarea>
+        <div class="char-count" id="descriptionCount" aria-hidden="true">0 / 1500</div>
+        <span class="field-error" id="description-error" role="alert"></span>
+
+        <div class="hp-field" aria-hidden="true"><label for="website">Leave this field empty</label><input type="text" id="website" name="_honey" tabindex="-1" autocomplete="off"></div>
+        <button type="submit" class="btn">Submit Quote Request</button>
+        <p id="quoteMessage" class="form-message" role="status" aria-live="polite"></p>
+    </form>
+    <div class="estimate" id="estimate" hidden aria-live="polite"></div>
+
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2 class="footer-title">Advance Tech Solutions</h2>
+        <p>Reliable technology solutions for home and business.</p>
+        <p>Email: <a href="mailto:info@advancetech.co.za">info@advancetech.co.za</a></p>
+        <p>Phone: <a href="tel:+27135551234">+27 13 555 1234</a></p>
+
+        <p>&copy; <span class="current-year">2026</span> Advance Tech Solutions. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
